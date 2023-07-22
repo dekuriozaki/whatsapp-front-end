@@ -13,16 +13,13 @@ function App() {
   const [haveAccount, setHaveAccount] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-
   const login = (mobile, password) => {
-    
-    console.log("Logging in...");
     if (mobile && password) {
-      console.log("Logging in...");
       setIsLoggedIn(true);
     }
   };
-  const logout = () => {
+
+  const handleLogout = () => {
     setIsLoggedIn(false);
   };
 
@@ -87,16 +84,13 @@ function App() {
     <div className="app">
       
       { isLoggedIn ?(<div className='app__body'>
-                      <Sidebar chats = {chats} logout = {logout} />
-                      <Chat messages={messages} />
+                      <Sidebar chats = {chats}/>
+                      <Chat messages={messages}/>
                     </div>)
-        : (<div>{ haveAccount ? <LoginForm toggleForm={toggleForm} login = {login}  /> : <SignupForm toggleForm={toggleForm} />}
+        : (<div>{ haveAccount ? <LoginForm toggleForm={toggleForm} login = {login} /> : <SignupForm toggleForm={toggleForm} />}
       </div>
       )}
-      {/* <div className="app-container">
-      <button onClick={handleButtonClick}>Click Me</button>
-      {isHoverVisible && <Profile ha />}
-      </div>   */}
+        
     </div>
   );
 }

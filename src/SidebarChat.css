@@ -1,0 +1,31 @@
+.sidebarChat{
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    /* border: #11101052; */
+    border-bottom: 1px solid #afa8a852;
+}
+
+.sidebarChat:hover{
+    background-color: #ebebeb;
+}
+
+.sidebarChat__Info  {
+    margin-left: 15px;
+}
+
+.sidebarChat__Info >h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* //for the dp of each chat */
+.chat_profile_pic{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    padding: 5px,5px,5px,5px;
+    cursor: pointer;    
+    border-bottom: solid #f6f6f6;
+    border-radius: 50%; 
+}
